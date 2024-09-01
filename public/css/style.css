@@ -24,10 +24,12 @@ header{
     color: rgb(165, 163, 163);
     font-size: 40px;
 }
+
 header a{
     text-decoration: none;
     color: #777777;
     padding-right :20px ;
+    text-decoration: underline #554646;
 }
 p{
     font-size: 30px;
@@ -55,3 +57,11 @@ button{
 button:hover{
     background-color: #554646;
 }
+.box{
+    width: 650px;
+    height: 168px;
+    background-color: #888888;
+    padding-inline-start: 9px;
+}
+
+

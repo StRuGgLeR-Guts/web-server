@@ -18,7 +18,7 @@ form.addEventListener('submit',(e)=>{
 
     const Location=input.value
 
-    fetch("http://localhost:3000/weather?address="+Location).then((res)=>{
+    fetch("/weather?address="+Location).then((res)=>{
         res.json().then((data)=>{
             if(data.err){
                 return mes1.textContent=(data.err)

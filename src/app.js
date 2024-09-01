@@ -6,6 +6,7 @@ const util = require("./utils/geocode.js")
 
 
 const { title } = require("process")
+const port = process.env.PORT || 3000
 
 
 //paths for dirs
@@ -27,7 +28,7 @@ app.get("",(req,res)=>{
     res.render("index",{
         credit:"Shows forecast",
         title:"Weather-app",
-        footer:"hii"
+        footer:"Jst for fun"
     })
 })
 
@@ -52,7 +53,7 @@ app.get("/help",(req,res)=>{
 
 app.get("/weather",(req,res)=>{
         if(!req.query.address){
-                return res.send({err:"Provide add ress"})
+                return res.send({err:"Provide address"})
         }
         util.geocode(req.query.address,(err,{location,latitude,longitude}={})=>{
                 if(err){
@@ -91,6 +92,6 @@ app.get("*",(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log("Server running")
+app.listen(port,()=>{
+    console.log("Server running on port :"+port)
 })
