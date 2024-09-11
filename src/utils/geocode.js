@@ -33,7 +33,7 @@ const geocode = (address,callback)=>{
       }
       else{
          const body = res.body.current
-         callback(undefined,body.condition.text+"....Currently the temp is "+body.temp_c+" but it feels like "+ body.feelslike_c+" and has a probability of "+body.humidity+"% to pour")
+         callback(undefined,body.condition.text+"....Currently the temp is "+body.temp_c+" but it feels like "+ body.feelslike_c+" and has a probability of "+body.humidity+"% to pour. The wind direction is +"+body.wind_dir)
       }
 
    })
